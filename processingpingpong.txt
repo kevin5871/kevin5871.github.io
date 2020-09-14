@@ -1,0 +1,55 @@
+float ball_x;
+float ball_y;
+float ball_dir = 1;
+float ball_size = 5;
+float dy = 0;
+
+int paddle_width = 20;
+int paddle_height = 100;
+int dist_wall = 60;
+void setup() {
+  size(800, 600);
+  rectMode(CENTER);
+  rectMode(RADIUS);
+  ellipseMode(CENTER);
+  ellipseMode(RADIUS);
+  noStroke();
+  smooth();
+  ball_y = height/2;
+  ball_x = 1;
+}
+void draw() {
+  background(51);
+  ball_x += ball_dir * 5.0;
+  ball_y += dy;
+
+  if(ball_x > width+ball_size) {
+    ball_x = -width/2 - ball_size;
+    ball_y = random(0, height);
+    dy = 0;
+  }
+  float paddle_y = constrain(mouseY, paddle_height, height - paddle_height);
+  float py = width-dist_wall-paddle_width-ball_size;
+  if(ball_x == py && ball_y > paddle_y - paddle_height - ball_size && ball_y < paddle_y + paddle_height + ball_size) {
+    ball_dir *= -1;
+    if(mouseY != pmouseY) {
+      dy = (mouseY-pmouseY)/2.0;
+      if(dy > 20) {dy = 20;}
+      if(dy < -20) {dy = -20;}
+    }
+  }
+  if(ball_x < ball_size && ball_dir == -1)
+  {
+    ball_dir *= -1;
+  }
+  if(ball_y > height-ball_size) {
+    dy = dy * -1;
+  }
+  if(ball_y < ball_size) {
+    dy = dy * -1;
+  }
+  fill(255);
+  ellipse(ball_x, ball_y,ball_size,ball_size);
+  fill(153);
+  rect(width-dist_wall, paddle_y, paddle_width, paddle_height);
+}
