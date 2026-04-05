@@ -1,0 +1,321 @@
+/* ===== Global ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  text-align: center;
+  line-height: 1.6;
+}
+
+h1 {
+  margin: 40px 0 20px;
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #111;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== Hero ===== */
+.hero {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  position: relative;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero p {
+  position: absolute;
+  font-size: 10px;
+  right: 10px;
+  bottom: 10px;
+  margin: 0;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about,
+#contact {
+  padding: 60px 20px;
+  background: #fafafa;
+}
+
+/* ===== About ===== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.about-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+}
+
+.about-text {
+  text-align: left;
+  max-width: 400px;
+}
+
+.about-text p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* ===== Projects ===== */
+#projects {
+  padding: 60px 20px;
+  background: #fafafa;
+  text-align: center;
+}
+.project-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.project-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-track {
+  display: flex;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  gap: 50px;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.project-card {
+  min-width: 95%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.project-card a {
+  color: black;
+  text-decoration: none;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 0px; /* 이미지와 텍스트 사이 간격 */
+}
+
+.card-img {
+  width: 300px; /* 이미지 크기 */
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  flex-shrink: 0; /* 줄어들지 않게 고정 */
+}
+
+.text-wrapper {
+  margin-left: auto; /* 오른쪽 정렬 */
+  text-align: right; /* 텍스트 내부 오른쪽 정렬 */
+}
+
+.view-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.view-btn:hover {
+  background: #0056b3;
+}
+
+button.prev,
+button.next {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+button.prev:hover,
+button.next:hover {
+  color: #ddd;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .project-slider {
+    flex-direction: column;
+  }
+
+  button.prev,
+  button.next {
+    margin: 10px 0;
+  }
+}
+
+/* ===== Links Page ===== */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.link-card {
+  display: block;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.link-card h3 {
+  margin: 0 0 8px;
+}
+
+.link-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  background: #007bff;
+  color: white;
+}
+
+.link-card:hover p {
+  color: #e0e0e0;
+}
+
+/* ===== Downloads Page ===== */
+.file-list {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.file-list li {
+  margin: 10px 0;
+}
+
+.file-list a {
+  display: block;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.file-list a:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ===== Misc ===== */
+.url-list span {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.url-list a {
+  color: black;
+  text-decoration: none;
+}
+
+.project {
+  margin: 20px 0;
+}
+
+/* ===== Contact ===== */
+.email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #ddd;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.email-btn:hover {
+  background: #aaa;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  color: white;
+}

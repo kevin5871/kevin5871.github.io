@@ -1,19 +1,137 @@
-<!DOCTYPE html>
+<!-- made by chatgpt lol-->
 
-<html>
+<!doctype html>
+<html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <title>홈</title>
+    <meta charset="UTF-8" />
+    <title>Just a normal site</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>깃헙 이용 서버. kevin5871 전용입니다. <br>
-      <a href="https://kevin5871.github.io/testform.txt">testform</a> <br>
-      <a href="https://kevin5871.github.io/kos0.9finaltest.txt">kos0.9test</a> <br>
-      <a href="https://kevin5871.github.io/Setup.exe">학습용 리듬게임 다운로드(구버전)</a> <br>
-      <a href="https://kevin5871.github.io/RhythmGamePatch1.exe">학습용 리듬게임 구버전 다운로드</a> <br>
-      <a href="https://kevin5871.github.io/RGPS_Setup.exe ">학습용 리듬게임 최신버전 다운로드</a> <br>
-      <a href="https://kevin5871.github.io/VoteProgramSetup.exe ">투표 프로그램 최신버전 다운로드</a> <br>
-      <a href="https://kevin5871.github.io/the_disappearance_of_hastune_miku_dead_end.sb2 ">소실sb2</a> <br>
-      <a href="https://kevin5871.github.io/processingpingpong.txt">processingpingpong</a> </p> <br>
+    <!-- NAV -->
+    <nav>
+      <h2>kevin5871.github.io</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="./links.html">Links</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>안녕하세요 👋</h1>
+      <h4>Hello, World! 👋</h4>
+      <p>사진 : 본인</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About</h2>
+
+      <div class="about-container">
+        <img src="logo.png" alt="profile" class="about-img" />
+
+        <div class="about-text">
+          <p><strong>안녕하세요 🐱</strong></p>
+          <p>sfcatz / kevin5871</p>
+          <p>Millitary Service in ROKAF (~27.02)</p>
+
+          <div class="url-list">
+            <a href="https://github.com/kevin5871" target="_blank"
+              ><span>Github</span></a
+            >
+            <a href="https://blog.naver.com/sfcatz" target="_blank"
+              ><span>Blog</span></a
+            >
+            <a href="https://v-archive.net/archive/sfcatz/board" target="_blank"
+              ><span>Other</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Main Projects</h2>
+
+      <div class="project-slider">
+        <button class="prev">◀</button>
+
+        <div class="project-track">
+          <div class="project-card">
+            <a
+              href="https://github.com/kevin5871/RGX-4.0-Python"
+              target="_blank"
+            >
+              <div class="card-content">
+                <img
+                  src="https://postfiles.pstatic.net/MjAxOTEwMTBfMzAw/MDAxNTcwNjM0OTk4MTI5.UgEeY3xivFjjKxKHqGhHHCsk4u_vqOMfoxykGfro5N0g.3SEu9M_FfYwMm7ICju_fSfJI8JzRie7EniZz9mHsIpIg.PNG.sfcats_crazy/image.png?type=w773"
+                  alt="Project 1"
+                  class="card-img"
+                />
+                <div class="text-wrapper">
+                  <h3>RGX Projects</h3>
+                  <p class="project-desc">(2019~2025)</p>
+                  <p>Pygame 기반 리듬 게임 제작 프로젝트</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <a href="https://github.com/kevin5871/MapleTools" target="_blank">
+              <div class="card-content">
+                <img
+                  src="https://postfiles.pstatic.net/MjAyMjA2MjNfMTgw/MDAxNjU1OTU5MTY4NDM3.aJ5wi3vz-aVBwhb47VR9reG2yhblvzrCCdWgjoMsYPcg.JKMSg1li2Aw17cbt__ZTQ3e7TOCC2oXKapLdpztQdE0g.PNG.sfcatz/image1.png?type=w3840"
+                  alt="Project 2"
+                  class="card-img"
+                />
+                <div class="text-wrapper">
+                  <h3>MapleTools</h3>
+                  <p class="project-desc">(2022)</p>
+                  <p>Python 기반 MapleStory 관련 도구 개발 프로젝트</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <a href="https://github.com/kevin5871/RealTTRs" target="_blank">
+            <div class="card-content">
+              <img
+                src="https://opengraph.githubassets.com/330f8fb2911cae2afb8c4900690c17f27f340d36d4ee69e86d8430067715bd47/kevin5871/RealTTRs"
+                alt="Project 3"
+                class="card-img"
+              />
+              <div class="text-wrapper">
+                <h3>RealTTRs</h3>
+                <p class="project-desc">(2021)</p>
+                <p>Python 기반 화면 실시간 번역 프로젝트</p>
+              </div>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <button class="next">▶</button>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-buttons">
+        <a href="mailto:kevin587121@gmail.com" class="email-btn"> 📧 Email </a>
+      </div>
+    </section>
+    <footer>
+      <p>
+        이 페이지는 PC 환경을 기준으로 제작되었습니다. ChatGPT is awesome! lol
+        🤣
+      </p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
